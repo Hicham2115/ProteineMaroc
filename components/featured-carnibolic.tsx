@@ -21,15 +21,15 @@ const productUrl = "https://mesproteines.ma/produit/carnibolic-150-grammes/";
 
 export function FeaturedCarnibolic() {
   return (
-    <section className="bg-[#080a0b] px-3 py-8 text-white sm:px-6 lg:px-8" aria-labelledby="carnibolic-title">
-      <div className="mx-auto grid max-w-[1440px] overflow-hidden border border-[#202326] bg-[#050607] lg:min-h-[630px] lg:grid-cols-[1.1fr_.9fr]">
+    <section className="bg-[#212326] px-3 py-8 text-white sm:px-6 lg:px-8" aria-labelledby="carnibolic-title">
+      <div className="mx-auto grid max-w-[1440px] overflow-hidden border border-[#303337] bg-[#212326] lg:min-h-[630px] lg:grid-cols-[1.1fr_.9fr]">
         <div className="relative aspect-[1.1/1] min-h-[340px] bg-[#090b0d] sm:min-h-[440px] lg:aspect-auto lg:min-h-0">
           <Image
-            src="/images/products/carnibolic-feature.png"
-            alt="Carnibolic Peach Mango, mis en scène avec des fruits et un splash d’eau"
+            src="/images/products/carnibolic-product-scene.png"
+            alt="Pot Carnibolic Peach Mango mis en scène avec des morceaux de pêche, de mangue et un splash d’eau"
             fill
             sizes="(max-width: 1024px) 100vw, 60vw"
-            className="object-cover"
+            className="scale-[.95] object-cover"
             priority
           />
         </div>
