@@ -37,6 +37,14 @@ const products = [
     image: "/images/products/super-mass-gainer-full.jpg",
     href: "https://mesproteines.ma/produit/super-mass-gainer-2-7kg/",
   },
+  {
+    brand: "Cellucor",
+    name: "C4 Pre-Workout",
+    detail: "30 servings",
+    price: "390",
+    image: "/images/products/c4-original.jpg",
+    href: "https://mesproteines.ma/boutique/",
+  },
 ];
 
 function ProductCard({ product }: { product: (typeof products)[number] }) {
@@ -60,7 +68,7 @@ function ProductCard({ product }: { product: (typeof products)[number] }) {
         <p className="m-0 text-[13px] font-extrabold">{product.price} DHS {product.oldPrice && <del className="ml-1 text-[10px] font-medium text-ink-muted">{product.oldPrice}</del>}</p>
         <a
           href={product.href}
-          aria-label={`Voir les options de ${product.name}`}
+          aria-label={product.brand === "Cellucor" ? "Voir la boutique" : `Voir les options de ${product.name}`}
           className="grid size-[34px] place-items-center bg-charcoal text-white transition-colors hover:bg-brand-red"
         >
           <ShoppingCart size={17} strokeWidth={2} />
@@ -82,7 +90,7 @@ export function FeaturedProducts() {
             Voir toute la boutique <ArrowRight size={15} aria-hidden="true" />
           </a>
         </div>
-        <div className="grid grid-cols-4 gap-[clamp(12px,1.4vw,22px)] max-[700px]:-mx-5 max-[700px]:flex max-[700px]:snap-x max-[700px]:snap-mandatory max-[700px]:gap-3 max-[700px]:overflow-x-auto max-[700px]:px-5 max-[700px]:pb-2">
+        <div className="grid grid-cols-5 gap-[clamp(12px,1.4vw,22px)] max-[700px]:-mx-5 max-[700px]:flex max-[700px]:snap-x max-[700px]:snap-mandatory max-[700px]:gap-3 max-[700px]:overflow-x-auto max-[700px]:px-5 max-[700px]:pb-2">
           {products.map((product) => (
             <div className="max-[700px]:w-[72vw] max-[700px]:flex-none max-[700px]:snap-start" key={`${product.name}-${product.detail}`}>
               <ProductCard product={product} />
