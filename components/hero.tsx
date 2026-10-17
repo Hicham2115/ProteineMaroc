@@ -31,7 +31,7 @@ export function Hero() {
         aria-hidden="true"
       />
 
-      <div className="relative z-[2] ml-[3.6%] w-[min(34%,520px)] py-8 pr-5 max-[700px]:-mt-[clamp(48px,13vw,90px)] max-[700px]:w-full max-[700px]:bg-transparent max-[700px]:px-[14px] max-[700px]:pb-[clamp(30px,7vw,54px)] max-[700px]:pt-[clamp(76px,18vw,116px)] max-[700px]:text-left">
+      <div className="relative z-[2] ml-[3.6%] w-[min(34%,520px)] py-8 pr-5 max-[700px]:-mt-[clamp(160px,42vw,240px)] max-[700px]:w-full max-[700px]:bg-transparent max-[700px]:px-[14px] max-[700px]:pb-[clamp(30px,7vw,54px)] max-[700px]:pt-[clamp(32px,8vw,52px)] max-[700px]:text-left">
         <p className="mb-3 hidden text-[10px] font-bold uppercase tracking-[.2em] text-white/75 max-[700px]:block max-[600px]:text-[9px]">
           Nutrition · performance · bien-être
         </p>

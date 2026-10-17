@@ -1,56 +1,41 @@
 import Image from "next/image";
-import { ArrowRight, ShoppingCart, Star } from "lucide-react";
+import { ArrowRight, ShoppingCart } from "lucide-react";
 
 const products = [
   {
-    brand: "Nutrabolics",
-    name: "Carnibolic",
-    detail: "30 Servings",
-    price: "400",
-    rating: "4.9",
-    reviews: "1.5k",
-    image: "/images/products/carnibolic.svg",
-    href: "https://mesproteines.ma/produit/carnibolic-150-grammes/",
+    brand: "Dymatize",
+    name: "ISO100 Whey Isolate Sans Lactose",
+    detail: "2.3 kg",
+    price: "1 599",
+    oldPrice: "1 699",
+    image: "/images/products/dymatize-iso100-full.jpg",
+    href: "https://mesproteines.ma/produit/dymatize-iso100-2-3kg/",
   },
   {
     brand: "Optimum Nutrition",
-    name: "Gold Standard Whey",
-    detail: "2.27kg",
-    price: "790",
-    rating: "4.8",
-    reviews: "950",
-    image: "/images/products/gold-standard-whey.svg",
+    name: "Whey Gold Standard",
+    detail: "900 g",
+    price: "600",
+    oldPrice: "700",
+    image: "/images/products/gold-standard-full.jpg",
     href: "https://mesproteines.ma/produit/gold-standard-09kg/",
   },
   {
-    brand: "MuscleTech",
-    name: "Creatine Monohydrate",
-    detail: "300g",
-    price: "350",
-    rating: "4.7",
-    reviews: "620",
-    image: "/images/products/creatine.svg",
-    href: "https://mesproteines.ma/boutique/",
+    brand: "Optimum Nutrition",
+    name: "Serious Mass",
+    detail: "5.4 kg",
+    price: "1 100",
+    oldPrice: "1 200",
+    image: "/images/products/serious-mass-full.jpg",
+    href: "https://mesproteines.ma/produit/serious-mass-5-4-kg/",
   },
   {
-    brand: "Scivation",
-    name: "Xtend BCAA",
-    detail: "30 Servings",
-    price: "350",
-    rating: "4.6",
-    reviews: "430",
-    image: "/images/products/xtend-bcaa.svg",
-    href: "https://mesproteines.ma/boutique/",
-  },
-  {
-    brand: "Cellucor",
-    name: "C4 Pre-Workout",
-    detail: "30 Servings",
-    price: "390",
-    rating: "4.7",
-    reviews: "520",
-    image: "/images/products/c4-pre-workout.svg",
-    href: "https://mesproteines.ma/boutique/",
+    brand: "Dymatize",
+    name: "Super Mass Gainer",
+    detail: "2.7 kg",
+    price: "600",
+    image: "/images/products/super-mass-gainer-full.jpg",
+    href: "https://mesproteines.ma/produit/super-mass-gainer-2-7kg/",
   },
 ];
 
@@ -71,17 +56,11 @@ function ProductCard({ product }: { product: (typeof products)[number] }) {
         <h3 className="m-0 text-[13px] font-bold leading-snug text-ink">{product.name}</h3>
         <p className="mt-0.5 text-[12px] text-ink-muted">{product.detail}</p>
       </a>
-      <div className="mt-2 flex items-center gap-1.5 text-[11px]" aria-label={`Note ${product.rating} sur 5, ${product.reviews} avis`}>
-        <span className="flex text-[#efaa18]" aria-hidden="true">
-          {Array.from({ length: 5 }, (_, index) => <Star key={index} size={12} fill="currentColor" strokeWidth={1.4} />)}
-        </span>
-        <span className="text-ink-muted">{product.rating} ({product.reviews})</span>
-      </div>
       <div className="mt-2 flex items-center justify-between gap-2">
-        <p className="m-0 text-[13px] font-extrabold">{product.price} DHS</p>
+        <p className="m-0 text-[13px] font-extrabold">{product.price} DHS {product.oldPrice && <del className="ml-1 text-[10px] font-medium text-ink-muted">{product.oldPrice}</del>}</p>
         <a
           href={product.href}
-          aria-label={`Ajouter ${product.name} au panier`}
+          aria-label={`Voir les options de ${product.name}`}
           className="grid size-[34px] place-items-center bg-charcoal text-white transition-colors hover:bg-brand-red"
         >
           <ShoppingCart size={17} strokeWidth={2} />
@@ -103,9 +82,9 @@ export function FeaturedProducts() {
             Voir toute la boutique <ArrowRight size={15} aria-hidden="true" />
           </a>
         </div>
-        <div className="grid grid-cols-5 gap-[clamp(12px,1.4vw,22px)] max-[700px]:-mx-5 max-[700px]:flex max-[700px]:snap-x max-[700px]:snap-mandatory max-[700px]:gap-3 max-[700px]:overflow-x-auto max-[700px]:px-5 max-[700px]:pb-2">
+        <div className="grid grid-cols-4 gap-[clamp(12px,1.4vw,22px)] max-[700px]:-mx-5 max-[700px]:flex max-[700px]:snap-x max-[700px]:snap-mandatory max-[700px]:gap-3 max-[700px]:overflow-x-auto max-[700px]:px-5 max-[700px]:pb-2">
           {products.map((product) => (
-            <div className="max-[700px]:w-[72vw] max-[700px]:flex-none max-[700px]:snap-start" key={product.name}>
+            <div className="max-[700px]:w-[72vw] max-[700px]:flex-none max-[700px]:snap-start" key={`${product.name}-${product.detail}`}>
               <ProductCard product={product} />
             </div>
           ))}
