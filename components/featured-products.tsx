@@ -1,51 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, ShoppingCart } from "lucide-react";
-
-const products = [
-  {
-    brand: "Dymatize",
-    name: "ISO100 Whey Isolate Sans Lactose",
-    detail: "2.3 kg",
-    price: "1 599",
-    oldPrice: "1 699",
-    image: "/images/products/dymatize-iso100-full.jpg",
-    href: "https://mesproteines.ma/produit/dymatize-iso100-2-3kg/",
-  },
-  {
-    brand: "Optimum Nutrition",
-    name: "Whey Gold Standard",
-    detail: "900 g",
-    price: "600",
-    oldPrice: "700",
-    image: "/images/products/gold-standard-full.jpg",
-    href: "https://mesproteines.ma/produit/gold-standard-09kg/",
-  },
-  {
-    brand: "Optimum Nutrition",
-    name: "Serious Mass",
-    detail: "5.4 kg",
-    price: "1 100",
-    oldPrice: "1 200",
-    image: "/images/products/serious-mass-full.jpg",
-    href: "https://mesproteines.ma/produit/serious-mass-5-4-kg/",
-  },
-  {
-    brand: "Dymatize",
-    name: "Super Mass Gainer",
-    detail: "2.7 kg",
-    price: "600",
-    image: "/images/products/super-mass-gainer-full.jpg",
-    href: "https://mesproteines.ma/produit/super-mass-gainer-2-7kg/",
-  },
-  {
-    brand: "Cellucor",
-    name: "C4 Pre-Workout",
-    detail: "30 servings",
-    price: "390",
-    image: "/images/products/c4-original.jpg",
-    href: "https://mesproteines.ma/boutique/",
-  },
-];
+import { formatPrice, products } from "@/lib/products";
 
 function ProductCard({ product }: { product: (typeof products)[number] }) {
   return (
@@ -65,7 +21,7 @@ function ProductCard({ product }: { product: (typeof products)[number] }) {
         <p className="mt-0.5 text-[12px] text-ink-muted">{product.detail}</p>
       </a>
       <div className="mt-2 flex items-center justify-between gap-2">
-        <p className="m-0 text-[13px] font-extrabold">{product.price} DHS {product.oldPrice && <del className="ml-1 text-[10px] font-medium text-ink-muted">{product.oldPrice}</del>}</p>
+        <p className="m-0 text-[13px] font-extrabold">{formatPrice(product.price)} DHS {"oldPrice" in product && <del className="ml-1 text-[10px] font-medium text-ink-muted">{formatPrice(product.oldPrice)}</del>}</p>
         <a
           href={product.href}
           aria-label={product.brand === "Cellucor" ? "Voir la boutique" : `Voir les options de ${product.name}`}
@@ -86,9 +42,9 @@ export function FeaturedProducts() {
           <h2 id="featured-products-title" className="m-0 flex items-center gap-3 text-[10px] font-extrabold uppercase tracking-[.2em] text-brand-red">
             Nos produits phares <span className="h-px w-10 bg-brand-red" aria-hidden="true" />
           </h2>
-          <a className="inline-flex items-center gap-2 whitespace-nowrap text-[12px] font-bold text-brand-red transition-colors hover:text-brand-red-deep" href="#products">
+          <Link className="inline-flex items-center gap-2 whitespace-nowrap text-[12px] font-bold text-brand-red transition-colors hover:text-brand-red-deep" href="/products/">
             Voir toute la boutique <ArrowRight size={15} aria-hidden="true" />
-          </a>
+          </Link>
         </div>
         <div className="grid grid-cols-5 gap-[clamp(12px,1.4vw,22px)] max-[700px]:-mx-5 max-[700px]:flex max-[700px]:snap-x max-[700px]:snap-mandatory max-[700px]:gap-3 max-[700px]:overflow-x-auto max-[700px]:px-5 max-[700px]:pb-2">
           {products.map((product) => (

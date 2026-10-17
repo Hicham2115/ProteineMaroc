@@ -12,7 +12,7 @@ import { MobileMenu } from "./mobile-menu";
 
 const navigation = [
   { label: "Accueil", href: "/#top" },
-  { label: "Boutique", href: "/#products" },
+  { label: "Boutique", href: "/products/" },
   { label: "Prise de masse", href: "/#goals" },
   { label: "Perte de poids", href: "/#goals" },
   { label: "Vitamines & santé", href: "/#categories" },

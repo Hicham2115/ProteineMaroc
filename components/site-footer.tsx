@@ -4,7 +4,7 @@ import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { CurrentYear } from "@/components/current-year";
 
 const shopLinks = [
-  { label: "La boutique", href: "/#products" },
+  { label: "La boutique", href: "/products/" },
   {
     label: "Prise de masse",
     href: "/#goals",
