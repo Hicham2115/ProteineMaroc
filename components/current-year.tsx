@@ -1,5 +1,9 @@
 "use client";
 
+import { use } from "react";
+import { io } from "next/cache";
+
 export function CurrentYear() {
-  return <>{new Date().getFullYear()}</>;
+  use(io());
+  return <>{new Date().getUTCFullYear()}</>;
 }

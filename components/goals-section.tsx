@@ -30,7 +30,7 @@ const goals = [
 
 export function GoalsSection() {
   return (
-    <section className="overflow-hidden bg-charcoal px-[clamp(20px,4vw,60px)] py-[clamp(52px,7vw,96px)] text-white" aria-labelledby="goals-title">
+    <section id="goals" className="scroll-mt-6 overflow-hidden bg-charcoal px-[clamp(20px,4vw,60px)] py-[clamp(52px,7vw,96px)] text-white" aria-labelledby="goals-title">
       <div className="mx-auto max-w-[1440px]">
         <div className="mb-8 flex items-end justify-between gap-8 max-[700px]:mb-6 max-[700px]:block">
           <div>

@@ -10,12 +10,12 @@ import {
 import { MobileMenu } from "./mobile-menu";
 
 const navigation = [
-  { label: "Accueil", href: "https://mesproteines.ma/", current: true },
-  { label: "Boutique", href: "https://mesproteines.ma/boutique/" },
-  { label: "Prise de masse", href: "https://mesproteines.ma/categorie/prise-de-masse/" },
-  { label: "Perte de poids", href: "https://mesproteines.ma/categorie/perte-de-poids/" },
-  { label: "Vitamines & santé", href: "https://mesproteines.ma/categorie/6/" },
-  { label: "Qui sommes-nous ?", href: "https://mesproteines.ma/qui-sommes-nous/" },
+  { label: "Accueil", href: "#top", current: true },
+  { label: "Boutique", href: "#products" },
+  { label: "Prise de masse", href: "#goals" },
+  { label: "Perte de poids", href: "#goals" },
+  { label: "Vitamines & santé", href: "#categories" },
+  { label: "Qui sommes-nous ?", href: "#contact" },
 ];
 
 const services = [
@@ -63,7 +63,7 @@ function AnnouncementSet() {
 
 export function Header() {
   return (
-    <header className="relative z-10 bg-paper">
+    <header id="top" className="relative z-10 bg-paper">
       <div
         className="overflow-hidden bg-brand-red py-0 text-[10px] font-semibold uppercase tracking-[.085em] text-white"
         role="region"
@@ -86,7 +86,7 @@ export function Header() {
       <div className="grid min-h-[88px] grid-cols-[minmax(190px,1fr)_auto_minmax(100px,1fr)] items-center gap-[clamp(10px,1.4vw,22px)] border-b border-[#e9e6e0] px-[clamp(18px,3vw,52px)] max-[700px]:grid-cols-[1fr_auto] max-[700px]:gap-3 max-[700px]:px-[19px] max-[700px]:min-h-[72px]">
         <a
           className="block w-[210px] max-[700px]:w-[184px]"
-          href="https://mesproteines.ma/"
+          href="#top"
           aria-label="Mes Proteines Nutrition, accueil"
         >
           <Image
@@ -104,14 +104,14 @@ export function Header() {
         <div className="hidden items-center justify-end gap-2 min-[701px]:flex">
           <a
             className="inline-flex size-10 items-center justify-center rounded-full text-charcoal transition-colors hover:bg-surface-soft hover:text-brand-red"
-            href="https://mesproteines.ma/boutique/"
+            href="#products"
             aria-label="Favoris"
           >
             <Heart size={21} strokeWidth={1.75} />
           </a>
           <a
             className="relative inline-flex size-10 items-center justify-center rounded-full text-charcoal transition-colors hover:bg-surface-soft hover:text-brand-red"
-            href="https://mesproteines.ma/panier/"
+            href="#products"
             aria-label="Voir le panier"
           >
             <ShoppingBag size={21} strokeWidth={1.75} />

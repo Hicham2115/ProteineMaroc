@@ -3,25 +3,25 @@ import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { CurrentYear } from "@/components/current-year";
 
 const shopLinks = [
-  { label: "La boutique", href: "https://mesproteines.ma/boutique/" },
+  { label: "La boutique", href: "#products" },
   {
     label: "Prise de masse",
-    href: "https://mesproteines.ma/categorie/prise-de-masse/",
+    href: "#goals",
   },
   {
     label: "Perte de poids",
-    href: "https://mesproteines.ma/categorie/perte-de-poids/",
+    href: "#goals",
   },
-  { label: "Vitamines & santé", href: "https://mesproteines.ma/categorie/6/" },
+  { label: "Vitamines & santé", href: "#categories" },
 ];
 
 const aboutLinks = [
-  { label: "Accueil", href: "https://mesproteines.ma/" },
+  { label: "Accueil", href: "#top" },
   {
     label: "Qui sommes-nous ?",
-    href: "https://mesproteines.ma/qui-sommes-nous/",
+    href: "#contact",
   },
-  { label: "Nos conseils", href: "https://mesproteines.ma/articles/" },
+  { label: "Nos conseils", href: "#faq" },
 ];
 
 export function SiteFooter() {
@@ -38,7 +38,7 @@ export function SiteFooter() {
         <div className="grid gap-12 py-[clamp(56px,7vw,88px)] md:grid-cols-[1.25fr_.75fr_.85fr_1.15fr] md:gap-8 lg:gap-14">
           <div className="max-w-[340px]">
             <a
-              href="https://mesproteines.ma/"
+              href="#top"
               aria-label="Mes Protéines Nutrition, accueil"
               className="inline-block w-[220px] max-w-full"
             >

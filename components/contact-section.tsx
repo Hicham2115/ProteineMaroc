@@ -70,7 +70,7 @@ export function ContactSection() {
   }
 
   return (
-    <section className="bg-white px-[clamp(20px,4vw,72px)] py-[clamp(80px,9vw,136px)] text-[#202326]" aria-labelledby="contact-title">
+    <section id="contact" className="scroll-mt-6 bg-white px-[clamp(20px,4vw,72px)] py-[clamp(80px,9vw,136px)] text-[#202326]" aria-labelledby="contact-title">
       <div className="mx-auto max-w-[1500px]">
         <div className="mb-12 flex flex-col justify-between gap-8 border-b border-[#202326]/15 pb-10 md:mb-14 md:flex-row md:items-end">
           <div>

@@ -35,7 +35,8 @@ const categories = [
 export function CategoriesSection() {
   return (
     <section
-      className="bg-[#f5f2ec] px-[clamp(20px,4vw,60px)] py-[clamp(32px,4vw,56px)]"
+      id="categories"
+      className="scroll-mt-6 bg-[#f5f2ec] px-[clamp(20px,4vw,60px)] py-[clamp(32px,4vw,56px)]"
       aria-labelledby="categories-title"
     >
       <div className="mx-auto max-w-[1440px]">
@@ -48,7 +49,7 @@ export function CategoriesSection() {
           </h2>
           <a
             className="inline-flex items-center gap-2 whitespace-nowrap text-[12px] font-bold text-brand-red transition-colors hover:text-brand-red-deep"
-            href="https://mesproteines.ma/boutique/"
+            href="#products"
           >
             Voir toute la boutique <ArrowRight size={15} aria-hidden="true" />
           </a>

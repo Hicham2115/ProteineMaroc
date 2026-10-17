@@ -25,7 +25,7 @@ const faqs = [
 
 export function FaqSection() {
   return (
-    <section className="mt-8 bg-[#212326] px-[clamp(20px,4vw,60px)] py-[clamp(56px,7vw,96px)] text-white" aria-labelledby="faq-title">
+    <section id="faq" className="scroll-mt-6 mt-8 bg-[#212326] px-[clamp(20px,4vw,60px)] py-[clamp(56px,7vw,96px)] text-white" aria-labelledby="faq-title">
       <div className="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-[.72fr_1.28fr] lg:gap-20">
         <div className="flex flex-col items-start">
           <p className="mb-4 flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-[.22em] text-[#e46a61]">

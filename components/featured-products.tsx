@@ -80,13 +80,13 @@ function ProductCard({ product }: { product: (typeof products)[number] }) {
 
 export function FeaturedProducts() {
   return (
-    <section className="bg-paper px-[clamp(20px,4vw,60px)] py-[clamp(32px,4vw,56px)]" aria-labelledby="featured-products-title">
+    <section id="products" className="scroll-mt-6 bg-paper px-[clamp(20px,4vw,60px)] py-[clamp(32px,4vw,56px)]" aria-labelledby="featured-products-title">
       <div className="mx-auto max-w-[1440px]">
         <div className="mb-5 flex items-center justify-between gap-4">
           <h2 id="featured-products-title" className="m-0 flex items-center gap-3 text-[10px] font-extrabold uppercase tracking-[.2em] text-brand-red">
             Nos produits phares <span className="h-px w-10 bg-brand-red" aria-hidden="true" />
           </h2>
-          <a className="inline-flex items-center gap-2 whitespace-nowrap text-[12px] font-bold text-brand-red transition-colors hover:text-brand-red-deep" href="https://mesproteines.ma/boutique/">
+          <a className="inline-flex items-center gap-2 whitespace-nowrap text-[12px] font-bold text-brand-red transition-colors hover:text-brand-red-deep" href="#products">
             Voir toute la boutique <ArrowRight size={15} aria-hidden="true" />
           </a>
         </div>

@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, Star } from "lucide-react";
 
 const reviews = [
   {
+    id: "casablanca-1",
     name: "Client démo · Casablanca",
     initials: "CD",
     stars: 5,
@@ -12,6 +13,7 @@ const reviews = [
     demo: false,
   },
   {
+    id: "rabat-1",
     name: "Client démo · Rabat",
     initials: "CD",
     stars: 5,
@@ -19,6 +21,7 @@ const reviews = [
     demo: false,
   },
   {
+    id: "tanger-1",
     name: "Client démo · Tanger",
     initials: "CD",
     stars: 5,
@@ -26,6 +29,7 @@ const reviews = [
     demo: false,
   },
   {
+    id: "casablanca-2",
     name: "Client démo · Casablanca",
     initials: "CD",
     stars: 5,
@@ -33,6 +37,7 @@ const reviews = [
     demo: false,
   },
   {
+    id: "marrakech-1",
     name: "Client démo · Marrakech",
     initials: "CD",
     stars: 5,
@@ -40,6 +45,7 @@ const reviews = [
     demo: false,
   },
   {
+    id: "fes-1",
     name: "Client démo · Fès",
     initials: "CD",
     stars: 5,
@@ -159,7 +165,7 @@ export function ReviewsSection() {
           >
             {reviews.map((review, index) => (
               <article
-                key={review.name}
+                key={review.id}
                 className={`group relative flex min-h-[270px] w-[88%] flex-none snap-start flex-col overflow-hidden border border-[#212326]/[.08] p-6 shadow-[0_14px_38px_rgba(33,35,38,.07)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_48px_rgba(33,35,38,.12)] sm:w-[calc(50%-8px)] sm:p-7 ${index % 2 === 0 ? "bg-[#fbfaf8]" : "bg-[#f4f0ea]"}`}
               >
                 <span
