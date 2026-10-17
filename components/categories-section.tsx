@@ -5,7 +5,7 @@ const categories = [
   {
     name: "Perte de poids",
     count: "14 produits",
-    image: "/images/categories/lose-weight.jpg",
+    image: "/images/categories/lose-weight-v2.jpg",
     imagePosition: "object-[center_68%]",
     href: "https://mesproteines.ma/categorie/perte-de-poids/",
   },
