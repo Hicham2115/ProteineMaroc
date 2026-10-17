@@ -1,9 +1,13 @@
 "use client";
 
-import { use } from "react";
-import { io } from "next/cache";
+import { useEffect, useState } from "react";
 
 export function CurrentYear() {
-  use(io());
-  return <>{new Date().getUTCFullYear()}</>;
+  const [year, setYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
+  return year ?? "";
 }
