@@ -32,20 +32,22 @@ export function Hero() {
         aria-hidden="true"
       />
 
-      <div className="relative z-[2] ml-[1.5%] w-[min(62%,1000px)] py-8 pr-5 max-[700px]:-mt-[clamp(160px,42vw,240px)] max-[700px]:ml-0 max-[700px]:w-full max-[700px]:bg-transparent max-[700px]:px-[14px] max-[700px]:pb-[clamp(30px,7vw,54px)] max-[700px]:pt-[clamp(32px,8vw,52px)] max-[700px]:text-left">
+      <div className="relative z-[2] ml-[3.6%] w-[min(34%,580px)] py-8 pr-5 max-[700px]:-mt-[clamp(160px,42vw,240px)] max-[700px]:ml-0 max-[700px]:w-full max-[700px]:bg-transparent max-[700px]:px-[14px] max-[700px]:pb-[clamp(30px,7vw,54px)] max-[700px]:pt-[clamp(32px,8vw,52px)] max-[700px]:text-left">
         <p className="hero-support mb-3 hidden text-[10px] font-bold uppercase tracking-[.2em] text-white/75 max-[700px]:block max-[600px]:text-[9px]">
           Nutrition · performance · bien-être
         </p>
-        <h1 className="hero-title-enter m-0 w-full max-w-none font-heading text-[clamp(42px,3.6vw,72px)] font-black uppercase leading-[.9] tracking-[-.025em] [text-wrap:balance] max-[700px]:max-w-[680px] max-[700px]:text-[clamp(40px,8vw,76px)] max-[600px]:max-w-full max-[600px]:font-serif max-[600px]:text-[clamp(30px,7.2vw,42px)] max-[600px]:font-bold max-[600px]:leading-[.98] max-[600px]:tracking-[-.055em]">
+        <h1 className="hero-title-enter m-0 w-full max-w-none font-heading text-[clamp(44px,4.2vw,62px)] font-black uppercase leading-[.82] tracking-[-.035em] [text-wrap:balance] max-[700px]:max-w-[680px] max-[700px]:text-[clamp(40px,8vw,76px)] max-[600px]:max-w-full max-[600px]:font-serif max-[600px]:text-[clamp(30px,7.2vw,42px)] max-[600px]:font-bold max-[600px]:leading-[.98] max-[600px]:tracking-[-.055em]">
           La performance
           <br />
-          se vit <em className="hero-title-emphasis font-normal">à votre façon</em><span className="hero-title-period text-brand-red">.</span>
+          se vit <em className="hero-title-emphasis font-normal">à votre</em>
+          <br className="max-[700px]:hidden" />
+          <em className="hero-title-emphasis font-normal">façon</em><span className="hero-title-period text-brand-red">.</span>
         </h1>
         <span
           className="hero-rule my-[22px] block h-1 w-[116px] -rotate-[3deg] rounded-full bg-brand-red max-[700px]:my-[17px] max-[700px]:h-[3px] max-[700px]:w-[96px] max-[600px]:my-[20px] max-[600px]:w-[68px]"
           aria-hidden="true"
         />
-        <p className="hero-copy m-0 max-w-[390px] text-[clamp(17px,1.35vw,32px)] leading-[1.5] text-white/90 max-[700px]:max-w-[560px] max-[700px]:text-[clamp(16px,2.2vw,21px)] max-[600px]:text-[clamp(16px,4.5vw,20px)] max-[600px]:leading-[1.35]">
+        <p className="hero-copy m-0 max-w-[390px] text-[clamp(18px,1.3vw,25px)] leading-[1.5] text-white/90 max-[700px]:max-w-[560px] max-[700px]:text-[clamp(16px,2.2vw,21px)] max-[600px]:text-[clamp(16px,4.5vw,20px)] max-[600px]:leading-[1.35]">
           Retrouvez des protéines, compléments et vitamines sélectionnés pour accompagner vos objectifs, avec une livraison partout au Maroc.
         </p>
         <Link
