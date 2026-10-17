@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useForm } from "@tanstack/react-form";
 import { z } from "zod";
-import { ArrowUpRight, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
+import { ArrowUpRight, Mail, MapPin, Phone, Send } from "lucide-react";
 
 const contactSchema = z.object({
   name: z.string().trim().min(2, "Indiquez votre nom (2 caractères minimum)."),
@@ -30,7 +30,7 @@ const fieldClass =
 export function ContactSection() {
   const [errors, setErrors] = useState<ContactErrors>({});
   const [feedback, setFeedback] = useState("");
-  const [whatsappUrl, setWhatsappUrl] = useState("");
+  const [emailUrl, setEmailUrl] = useState("");
 
   const form = useForm({
     defaultValues: initialValues,
@@ -49,27 +49,24 @@ export function ContactSection() {
       }
 
       const { name, email, phone, subject, message } = result.data;
-      const whatsappMessage = [
-        "Bonjour Mes Proteines Nutrition,",
-        "",
+      const emailBody = [
         `Nom : ${name}`,
         `E-mail : ${email}`,
         `Téléphone : ${phone}`,
-        `Sujet : ${subject}`,
         "",
         message,
       ].join("\n");
 
-      setWhatsappUrl(`https://wa.me/212669734949?text=${encodeURIComponent(whatsappMessage)}`);
+      setEmailUrl(`mailto:infos@mesproteines.ma?subject=${encodeURIComponent(`Demande Mes Proteines — ${subject}`)}&body=${encodeURIComponent(emailBody)}`);
       setErrors({});
-      setFeedback("Votre message est prêt. Ouvrez WhatsApp pour l’envoyer.");
+      setFeedback("Votre message est prêt dans votre messagerie.");
     },
   });
 
   function clearError(field: keyof ContactValues) {
     setErrors((current) => ({ ...current, [field]: undefined }));
     setFeedback("");
-    setWhatsappUrl("");
+    setEmailUrl("");
   }
 
   return (
@@ -97,13 +94,13 @@ export function ContactSection() {
             <div className="pointer-events-none absolute -right-10 -top-10 size-44 rounded-full border border-white/[.06]" aria-hidden="true" />
             <div className="relative">
               <span className="mb-6 inline-flex size-12 items-center justify-center border border-[#e46a61]/40 text-[#e46a61]">
-                <MessageCircle size={20} aria-hidden="true" />
+                <Mail size={20} aria-hidden="true" />
               </span>
               <h3 className="mb-4 max-w-[420px] font-heading text-[38px] font-black uppercase leading-[.96] sm:text-[46px]">
                 À votre écoute, partout au Maroc.
               </h3>
               <p className="mb-0 max-w-[400px] text-[15px] leading-7 text-white/55">
-                Contactez-nous par téléphone, e-mail ou WhatsApp. Nous serons ravis de vous guider.
+                Contactez-nous par téléphone ou e-mail. Nous serons ravis de vous guider.
               </p>
             </div>
 
@@ -129,10 +126,6 @@ export function ContactSection() {
               </div>
             </div>
 
-            <a href="https://wa.me/212669734949" target="_blank" rel="noreferrer" className="group relative inline-flex min-h-12 w-fit items-center gap-3 border border-white/20 px-4 text-[12px] font-bold transition-colors hover:border-[#e46a61] hover:text-[#e46a61]">
-              Écrire sur WhatsApp
-              <ArrowUpRight size={16} className="text-[#e46a61] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
-            </a>
           </aside>
 
           <div className="bg-[#25282b] p-7 sm:p-11 lg:p-12">
@@ -205,14 +198,14 @@ export function ContactSection() {
                 <p role="status" aria-live="polite" className={`m-0 max-w-[420px] text-xs leading-5 ${feedback.startsWith("Votre") ? "text-emerald-300" : "text-white/45"}`}>
                   {feedback || "Les champs marqués d’un astérisque sont obligatoires."}
                 </p>
-                {whatsappUrl ? (
-                  <a href={whatsappUrl} target="_blank" rel="noreferrer" className="group inline-flex min-h-12 w-full items-center justify-center gap-3 bg-brand-red px-6 text-[12px] font-bold text-white transition-colors hover:bg-brand-red-deep focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e46a61] sm:w-auto">
-                    Ouvrir WhatsApp
+                {emailUrl ? (
+                  <a href={emailUrl} className="group inline-flex min-h-12 w-full items-center justify-center gap-3 bg-brand-red px-6 text-[12px] font-bold text-white transition-colors hover:bg-brand-red-deep focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e46a61] sm:w-auto">
+                    Contactez-nous
                     <ArrowUpRight size={16} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
                   </a>
                 ) : (
                   <button type="submit" className="group inline-flex min-h-12 w-full items-center justify-center gap-3 bg-brand-red px-6 text-[12px] font-bold text-white transition-colors hover:bg-brand-red-deep focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e46a61] sm:w-auto">
-                    Continuer sur WhatsApp
+                    Contactez-nous
                     <ArrowUpRight size={16} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
                   </button>
                 )}
