@@ -5,6 +5,7 @@ import { FeaturedCarnibolic } from "@/components/featured-carnibolic";
 import { CategoriesSection } from "@/components/categories-section";
 import { GoalsSection } from "@/components/goals-section";
 import { AudienceSection } from "@/components/audience-section";
+import { FaqSection } from "@/components/faq-section";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <GoalsSection />
       <CategoriesSection />
       <FeaturedCarnibolic />
+      <FaqSection />
     </>
   );
 }
