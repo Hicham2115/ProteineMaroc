@@ -93,7 +93,7 @@ export function AudienceSection() {
             <a
               key={product.name}
               href={product.href}
-              className="group relative grid min-h-[250px] grid-cols-[.82fr_1.18fr] overflow-hidden bg-[#f8f6f2] outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-inset max-[700px]:min-h-[215px]"
+              className="group relative grid min-h-[250px] grid-cols-[.82fr_1.18fr] overflow-hidden bg-[#eeeeee] outline-none focus-visible:ring-2 focus-visible:ring-brand-red focus-visible:ring-inset max-[700px]:min-h-[215px]"
               aria-label={`${product.name}, voir le produit`}
             >
               <div className="relative z-10 flex flex-col justify-center px-[clamp(14px,2vw,28px)] py-5">
@@ -108,7 +108,7 @@ export function AudienceSection() {
                   Découvrir <ArrowRight size={14} aria-hidden="true" />
                 </span>
               </div>
-              <div className="relative min-h-[250px] overflow-hidden bg-white max-[700px]:min-h-[215px]">
+              <div className="relative min-h-[250px] overflow-hidden bg-[#eeeeee] max-[700px]:min-h-[215px]">
                 <Image
                   src={product.image}
                   alt=""

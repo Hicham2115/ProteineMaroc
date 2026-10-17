@@ -6,6 +6,8 @@ import { CategoriesSection } from "@/components/categories-section";
 import { GoalsSection } from "@/components/goals-section";
 import { AudienceSection } from "@/components/audience-section";
 import { FaqSection } from "@/components/faq-section";
+import { ContactSection } from "@/components/contact-section";
+import { BmiCalculator } from "@/components/bmi-calculator";
 import { TrustStrip } from "@/components/trust-strip";
 import { ReviewsSection } from "@/components/reviews-section";
 
@@ -20,9 +22,10 @@ export default function Home() {
       <CategoriesSection />
       <FeaturedCarnibolic />
       <ReviewsSection />
-
       <FaqSection />
       <TrustStrip />
+      <ContactSection />
+      <BmiCalculator />
     </>
   );
 }
