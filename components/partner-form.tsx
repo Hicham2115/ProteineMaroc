@@ -5,10 +5,11 @@ import { ArrowRight, Paperclip } from "lucide-react";
 import { StoreSelect } from "@/components/ui/store-select";
 
 const partnerOptions = [
-  { value: "Coach sportif", label: "Coach sportif" },
+  { value: "Coach", label: "Coach" },
+  { value: "Revendeur", label: "Revendeur" },
+  { value: "Influenceur", label: "Influenceur" },
   { value: "Salle de sport", label: "Salle de sport" },
-  { value: "Créateur de contenu", label: "Créateur de contenu" },
-  { value: "Revendeur / boutique", label: "Revendeur / boutique" },
+  { value: "Nutritionniste", label: "Nutritionniste" },
   { value: "Autre", label: "Autre" },
 ];
 

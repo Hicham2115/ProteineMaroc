@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import {
-  ArrowRight,
-  Check,
-} from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import { Header } from "@/layout/header";
 import { SiteFooter } from "@/components/site-footer";
 import { PartnerForm } from "@/components/partner-form";
@@ -30,10 +27,22 @@ const benefits = [
 ];
 
 const partnerTypes = [
-  { label: "Coachs sportifs", note: "Accompagnez vos clients avec des produits adaptés." },
-  { label: "Salles de sport", note: "Proposez une offre complémentaire à vos adhérents." },
-  { label: "Créateurs de contenu", note: "Partagez votre expérience avec votre communauté." },
-  { label: "Revendeurs", note: "Développez votre sélection nutrition sportive." },
+  {
+    label: "Coachs sportifs",
+    note: "Accompagnez vos clients avec des produits adaptés.",
+  },
+  {
+    label: "Salles de sport",
+    note: "Proposez une offre complémentaire à vos adhérents.",
+  },
+  {
+    label: "Créateurs de contenu",
+    note: "Partagez votre expérience avec votre communauté.",
+  },
+  {
+    label: "Revendeurs",
+    note: "Développez votre sélection nutrition sportive.",
+  },
 ];
 
 export default function PartnerPage() {
@@ -43,7 +52,7 @@ export default function PartnerPage() {
       <main>
         <section className="relative isolate overflow-hidden bg-charcoal px-[clamp(20px,5vw,80px)] py-[clamp(64px,9vw,122px)] text-white">
           <Image
-            src="/images/audience/men-editorial.jpg"
+            src="/images/partner-hero.png"
             alt=""
             fill
             priority
@@ -81,11 +90,18 @@ export default function PartnerPage() {
 
             <div className="border-t border-white/20 lg:mb-1">
               {benefits.map(({ title, description }, index) => (
-                <article key={title} className="grid grid-cols-[34px_1fr] gap-3 border-b border-white/15 py-5 sm:grid-cols-[42px_1fr] sm:gap-4">
-                  <span className="pt-0.5 font-heading text-[20px] leading-none text-[#ef7770]">0{index + 1}</span>
+                <article
+                  key={title}
+                  className="grid grid-cols-[34px_1fr] gap-3 border-b border-white/15 py-5 sm:grid-cols-[42px_1fr] sm:gap-4"
+                >
+                  <span className="pt-0.5 font-heading text-[20px] leading-none text-[#ef7770]">
+                    0{index + 1}
+                  </span>
                   <div>
                     <h2 className="mb-1 mt-0 text-[14px] font-bold">{title}</h2>
-                    <p className="m-0 text-[12px] leading-5 text-white/55">{description}</p>
+                    <p className="m-0 text-[12px] leading-5 text-white/55">
+                      {description}
+                    </p>
                   </div>
                 </article>
               ))}
@@ -106,16 +122,27 @@ export default function PartnerPage() {
               </div>
               <p className="mb-1 max-w-[400px] text-[13px] leading-6 text-charcoal/65">
                 Le programme s’adresse aux professionnels et passionnés qui
-                partagent le goût du sport, du conseil et des produits de qualité.
+                partagent le goût du sport, du conseil et des produits de
+                qualité.
               </p>
             </div>
 
             <div className="grid border-y border-charcoal/15 sm:grid-cols-2 lg:grid-cols-4">
               {partnerTypes.map(({ label, note }, index) => (
-                <article key={label} className="border-b border-charcoal/15 py-5 pr-5 last:border-0 sm:px-5 sm:odd:border-r sm:odd:pl-0 sm:even:border-r-0 lg:border-b-0 lg:border-r lg:px-5 lg:first:pl-0 lg:last:border-0">
-                  <p className="mb-5 text-[10px] font-bold tabular-nums tracking-[.16em] text-brand-red">0{index + 1} <span className="ml-1 text-charcoal/35">/ 04</span></p>
-                  <h3 className="mb-2 mt-0 text-[15px] font-bold text-charcoal">{label}</h3>
-                  <p className="m-0 max-w-[240px] text-[12px] leading-5 text-charcoal/60">{note}</p>
+                <article
+                  key={label}
+                  className="border-b border-charcoal/15 py-5 pr-5 last:border-0 sm:px-5 sm:odd:border-r sm:odd:pl-0 sm:even:border-r-0 lg:border-b-0 lg:border-r lg:px-5 lg:first:pl-0 lg:last:border-0"
+                >
+                  <p className="mb-5 text-[10px] font-bold tabular-nums tracking-[.16em] text-brand-red">
+                    0{index + 1}{" "}
+                    <span className="ml-1 text-charcoal/35">/ 04</span>
+                  </p>
+                  <h3 className="mb-2 mt-0 text-[15px] font-bold text-charcoal">
+                    {label}
+                  </h3>
+                  <p className="m-0 max-w-[240px] text-[12px] leading-5 text-charcoal/60">
+                    {note}
+                  </p>
                 </article>
               ))}
             </div>
@@ -131,14 +158,32 @@ export default function PartnerPage() {
               </div>
               <ol className="m-0 grid list-none border-t border-charcoal/15 p-0 sm:grid-cols-3">
                 {[
-                  ["Présentez votre activité", "Parlez-nous de votre projet et de votre public."],
-                  ["Échangeons ensemble", "Notre équipe revient vers vous pour en discuter."],
-                  ["Définissons la suite", "Nous précisons ensemble les modalités adaptées."],
+                  [
+                    "Présentez votre activité",
+                    "Parlez-nous de votre projet et de votre public.",
+                  ],
+                  [
+                    "Échangeons ensemble",
+                    "Notre équipe revient vers vous pour en discuter.",
+                  ],
+                  [
+                    "Définissons la suite",
+                    "Nous précisons ensemble les modalités adaptées.",
+                  ],
                 ].map((step, index) => (
-                  <li key={step[0]} className="border-b border-charcoal/15 py-5 sm:border-b-0 sm:border-r sm:px-5 sm:first:pl-0 sm:last:border-0">
-                    <span className="mb-4 block font-heading text-[24px] leading-none text-brand-red">0{index + 1}</span>
-                    <h3 className="mb-2 mt-0 text-[13px] font-bold text-charcoal">{step[0]}</h3>
-                    <p className="m-0 text-[12px] leading-5 text-charcoal/60">{step[1]}</p>
+                  <li
+                    key={step[0]}
+                    className="border-b border-charcoal/15 py-5 sm:border-b-0 sm:border-r sm:px-5 sm:first:pl-0 sm:last:border-0"
+                  >
+                    <span className="mb-4 block font-heading text-[24px] leading-none text-brand-red">
+                      0{index + 1}
+                    </span>
+                    <h3 className="mb-2 mt-0 text-[13px] font-bold text-charcoal">
+                      {step[0]}
+                    </h3>
+                    <p className="m-0 text-[12px] leading-5 text-charcoal/60">
+                      {step[1]}
+                    </p>
                   </li>
                 ))}
               </ol>
@@ -146,14 +191,21 @@ export default function PartnerPage() {
           </div>
         </section>
 
-        <section id="candidature" className="scroll-mt-6 px-[clamp(20px,5vw,80px)] py-[clamp(64px,9vw,120px)]" aria-labelledby="partner-form-title">
+        <section
+          id="candidature"
+          className="scroll-mt-6 px-[clamp(20px,5vw,80px)] py-[clamp(64px,9vw,120px)]"
+          aria-labelledby="partner-form-title"
+        >
           <div className="mx-auto grid max-w-[1440px] gap-10 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
             <div>
               <p className="mb-4 flex items-center gap-3 text-[10px] font-extrabold uppercase tracking-[.22em] text-brand-red">
                 <span className="h-px w-7 bg-brand-red" aria-hidden="true" />
                 On en parle ?
               </p>
-              <h2 id="partner-form-title" className="m-0 font-heading text-[clamp(46px,7vw,86px)] font-black uppercase leading-[.86] tracking-[-.035em] text-charcoal">
+              <h2
+                id="partner-form-title"
+                className="m-0 font-heading text-[clamp(46px,7vw,86px)] font-black uppercase leading-[.86] tracking-[-.035em] text-charcoal"
+              >
                 Parlons
                 <br />
                 partenariat.
@@ -163,7 +215,11 @@ export default function PartnerPage() {
                 vous recontactera pour échanger sur la suite.
               </p>
               <p className="mb-0 mt-6 inline-flex items-center gap-2 text-[12px] text-charcoal/60">
-                <Check size={15} className="text-brand-red" aria-hidden="true" />
+                <Check
+                  size={15}
+                  className="text-brand-red"
+                  aria-hidden="true"
+                />
                 Réponse par e-mail ou téléphone
               </p>
             </div>

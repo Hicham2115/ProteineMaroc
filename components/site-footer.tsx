@@ -63,6 +63,32 @@ export function SiteFooter() {
               />
               Livraison partout au Maroc
             </span>
+            <nav className="mt-5 flex items-center gap-3" aria-label="Réseaux sociaux">
+              <a
+                href="https://www.instagram.com/mesproteinesmaroc/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mes Protéines Nutrition sur Instagram (nouvel onglet)"
+                className="grid size-10 place-items-center rounded-full bg-[#d94f9b] text-white transition-transform hover:scale-105 focus-visible:outline-white"
+              >
+                <svg viewBox="0 0 24 24" className="size-6 fill-none stroke-current" strokeWidth="2" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r=".8" className="fill-current stroke-none" />
+                </svg>
+              </a>
+              <a
+                href="https://api.whatsapp.com/send/?phone=212669734949&text&type=phone_number&app_absent=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contacter Mes Protéines Nutrition sur WhatsApp (nouvel onglet)"
+                className="grid size-10 place-items-center rounded-full bg-[#1dcc68] text-white transition-transform hover:scale-105 focus-visible:outline-white"
+              >
+                <svg viewBox="0 0 32 32" className="size-6 fill-current" aria-hidden="true">
+                  <path d="M16.03 3.2A12.73 12.73 0 0 0 5.06 22.38L3.3 28.8l6.57-1.72A12.78 12.78 0 1 0 16.03 3.2Zm0 23.25c-1.9 0-3.77-.5-5.42-1.45l-.39-.23-3.9 1.02 1.04-3.8-.25-.4a10.5 10.5 0 1 1 8.92 4.86Zm5.76-7.87c-.32-.16-1.9-.94-2.2-1.05-.3-.1-.52-.16-.74.16-.22.32-.84 1.05-1.03 1.27-.19.21-.38.24-.7.08-.32-.16-1.35-.5-2.57-1.58-.95-.85-1.6-1.9-1.79-2.22-.19-.32-.02-.5.14-.66.14-.14.32-.38.49-.57.16-.19.21-.32.32-.54.1-.21.05-.4-.03-.56-.08-.16-.73-1.76-1-2.4-.27-.63-.54-.54-.74-.55l-.63-.01c-.22 0-.57.08-.87.4-.3.32-1.14 1.11-1.14 2.7 0 1.6 1.17 3.14 1.33 3.36.16.21 2.3 3.5 5.58 4.91.78.34 1.39.55 1.86.7.78.25 1.49.22 2.05.14.63-.1 1.9-.78 2.16-1.54.27-.75.27-1.4.19-1.54-.08-.13-.3-.21-.62-.37Z" />
+                </svg>
+              </a>
+            </nav>
           </div>
 
           <nav aria-label="Liens boutique">
