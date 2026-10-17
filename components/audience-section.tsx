@@ -24,10 +24,10 @@ export function AudienceSection() {
   return (
     <section
       id="audience"
-      className="bg-[#f1eee8] p-[clamp(8px,1.2vw,18px)]"
+      className="bg-[#f1eee8] p-0"
       aria-label="Collections homme et femme et sélection de whey"
     >
-      <div className="mx-auto grid min-h-[min(760px,58vw)] max-w-[1680px] grid-cols-[.72fr_1.28fr] grid-rows-2 gap-0 max-[700px]:min-h-0 max-[700px]:grid-cols-1 max-[700px]:grid-rows-none">
+      <div className="grid min-h-[min(760px,58vw)] w-full grid-cols-[.72fr_1.28fr] grid-rows-2 gap-0 max-[700px]:min-h-0 max-[700px]:grid-cols-1 max-[700px]:grid-rows-none">
         <article className="group relative row-span-2 min-h-[600px] overflow-hidden bg-[#e9e2d7] max-[700px]:row-span-1 max-[700px]:min-h-[440px]">
           <Image
             src="/images/audience/men-model-v2.jpg"
@@ -108,7 +108,7 @@ export function AudienceSection() {
                   Découvrir <ArrowRight size={14} aria-hidden="true" />
                 </span>
               </div>
-              <div className="relative min-h-[250px] overflow-hidden bg-[#efeeec] max-[700px]:min-h-[215px]">
+              <div className="relative min-h-[250px] overflow-hidden bg-white max-[700px]:min-h-[215px]">
                 <Image
                   src={product.image}
                   alt=""
