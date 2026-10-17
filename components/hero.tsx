@@ -32,11 +32,11 @@ export function Hero() {
         aria-hidden="true"
       />
 
-      <div className="relative z-[2] ml-[3.6%] w-[min(40%,620px)] py-8 pr-5 max-[700px]:-mt-[clamp(160px,42vw,240px)] max-[700px]:w-full max-[700px]:bg-transparent max-[700px]:px-[14px] max-[700px]:pb-[clamp(30px,7vw,54px)] max-[700px]:pt-[clamp(32px,8vw,52px)] max-[700px]:text-left">
+      <div className="relative z-[2] ml-[1.5%] w-[min(62%,1000px)] py-8 pr-5 max-[700px]:-mt-[clamp(160px,42vw,240px)] max-[700px]:ml-0 max-[700px]:w-full max-[700px]:bg-transparent max-[700px]:px-[14px] max-[700px]:pb-[clamp(30px,7vw,54px)] max-[700px]:pt-[clamp(32px,8vw,52px)] max-[700px]:text-left">
         <p className="hero-support mb-3 hidden text-[10px] font-bold uppercase tracking-[.2em] text-white/75 max-[700px]:block max-[600px]:text-[9px]">
           Nutrition · performance · bien-être
         </p>
-        <h1 className="hero-title-enter m-0 max-w-[600px] font-heading text-[clamp(42px,3.6vw,72px)] font-black uppercase leading-[.9] tracking-[-.025em] [text-wrap:balance] max-[700px]:max-w-[680px] max-[700px]:text-[clamp(40px,8vw,76px)] max-[600px]:max-w-full max-[600px]:font-serif max-[600px]:text-[clamp(30px,7.2vw,42px)] max-[600px]:font-bold max-[600px]:leading-[.98] max-[600px]:tracking-[-.055em]">
+        <h1 className="hero-title-enter m-0 w-full max-w-none font-heading text-[clamp(42px,3.6vw,72px)] font-black uppercase leading-[.9] tracking-[-.025em] [text-wrap:balance] max-[700px]:max-w-[680px] max-[700px]:text-[clamp(40px,8vw,76px)] max-[600px]:max-w-full max-[600px]:font-serif max-[600px]:text-[clamp(30px,7.2vw,42px)] max-[600px]:font-bold max-[600px]:leading-[.98] max-[600px]:tracking-[-.055em]">
           La performance
           <br />
           se vit <em className="hero-title-emphasis font-normal">à votre façon</em><span className="hero-title-period text-brand-red">.</span>
