@@ -1,7 +1,9 @@
 import { Header } from "@/layout/header";
 import { Hero } from "@/components/hero";
 import { FeaturedProducts } from "@/components/featured-products";
+import { CategoriesSection } from "@/components/categories-section";
 import { GoalsSection } from "@/components/goals-section";
+import { AudienceSection } from "@/components/audience-section";
 
 export default function Home() {
   return (
@@ -9,7 +11,9 @@ export default function Home() {
       <Header />
       <Hero />
       <FeaturedProducts />
+      <AudienceSection />
       <GoalsSection />
+      <CategoriesSection />
     </>
   );
 }

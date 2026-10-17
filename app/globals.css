@@ -46,10 +46,6 @@
     @apply box-border;
   }
 
-  html {
-    @apply scroll-smooth;
-  }
-
   body {
     @apply m-0 bg-paper font-sans text-ink antialiased;
   }

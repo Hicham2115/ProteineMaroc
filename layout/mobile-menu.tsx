@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Heart, Menu, ShoppingBag, X } from "lucide-react";
 
@@ -52,10 +53,14 @@ export function MobileMenu({ items }: { items: NavigationItem[] }) {
             aria-label="Navigation principale"
           >
             <div className="mb-7 flex items-start justify-between border-b border-line pb-5">
-              <a className="flex flex-col leading-[.9] text-charcoal" href="https://mesproteines.ma/" aria-label="Mes Proteines Nutrition, accueil" onClick={() => setIsOpen(false)}>
-                <span className="ml-0.5 text-[9px] font-extrabold tracking-[.15em]">MES</span>
-                <span className="text-[25px] font-black tracking-[-.075em] text-brand-red">PROTÉINES</span>
-                <span className="mt-1 self-end text-[8px] font-extrabold tracking-[.16em]">NUTRITION</span>
+              <a className="block w-[190px]" href="https://mesproteines.ma/" aria-label="Mes Proteines Nutrition, accueil" onClick={() => setIsOpen(false)}>
+                <Image
+                  src="/images/mes-proteines-logo.webp"
+                  alt="Mes Protéines Nutrition"
+                  width={958}
+                  height={284}
+                  className="h-auto w-full"
+                />
               </a>
               <button
                 className="inline-flex size-10 items-center justify-center rounded-full bg-surface-soft text-charcoal transition-colors hover:bg-brand-red hover:text-white"

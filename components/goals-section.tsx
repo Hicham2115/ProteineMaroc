@@ -5,25 +5,25 @@ const goals = [
   {
     title: "Prise de masse",
     description: "Découvrez notre gamme pour soutenir vos objectifs de prise de masse.",
-    image: "/images/categories/prise-de-masse.webp",
+    image: "/images/categories/prise-de-masse-unsplash.jpg",
     href: "https://mesproteines.ma/categorie/prise-de-masse/",
   },
   {
     title: "Perte de poids",
     description: "Explorez des produits adaptés à votre objectif de perte de poids.",
-    image: "/images/categories/perte-de-poids.webp",
+    image: "/images/categories/perte-de-poids-unsplash.jpg",
     href: "https://mesproteines.ma/categorie/perte-de-poids/",
   },
   {
     title: "Performance",
     description: "Trouvez les suppléments qui accompagnent vos entraînements.",
-    image: "/images/categories/performance.webp",
+    image: "/images/categories/performance-unsplash.jpg",
     href: "https://mesproteines.ma/categorie/bcaa/",
   },
   {
     title: "Bien-être & santé",
     description: "Découvrez notre sélection pour le bien-être au quotidien.",
-    image: "/images/categories/bien-etre.webp",
+    image: "/images/categories/bien-etre-unsplash.jpg",
     href: "https://mesproteines.ma/categorie/6/",
   },
 ];
@@ -56,6 +56,7 @@ export function GoalsSection() {
                 alt=""
                 fill
                 sizes="(max-width: 600px) 78vw, (max-width: 900px) 48vw, 24vw"
+                quality={90}
                 className="-z-20 object-cover transition-transform duration-700 group-hover:scale-[1.045] motion-reduce:transition-none"
               />
               <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(15,17,18,.05)_20%,rgba(15,17,18,.28)_49%,rgba(15,17,18,.92)_100%)]" aria-hidden="true" />

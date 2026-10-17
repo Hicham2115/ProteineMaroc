@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   CreditCard,
   Heart,
@@ -84,17 +85,18 @@ export function Header() {
 
       <div className="grid min-h-[88px] grid-cols-[minmax(190px,1fr)_auto_minmax(100px,1fr)] items-center gap-[clamp(10px,1.4vw,22px)] border-b border-[#e9e6e0] px-[clamp(18px,3vw,52px)] max-[700px]:grid-cols-[1fr_auto] max-[700px]:gap-3 max-[700px]:px-[19px] max-[700px]:min-h-[72px]">
         <a
-          className="flex w-fit flex-col items-start leading-[.9] text-charcoal max-[700px]:flex-row max-[700px]:items-center max-[700px]:gap-1.5 max-[700px]:leading-none"
+          className="block w-[210px] max-[700px]:w-[184px]"
           href="https://mesproteines.ma/"
           aria-label="Mes Proteines Nutrition, accueil"
         >
-          <span className="ml-0.5 text-[11px] font-extrabold tracking-[.15em] max-[700px]:hidden">MES</span>
-          <span className="text-[clamp(23px,2vw,30px)] font-black tracking-[-.075em] text-brand-red max-[700px]:text-[25px]">
-            PROTÉINES
-          </span>
-          <span className="mt-1 self-end text-[9px] font-extrabold tracking-[.16em] max-[700px]:mt-0 max-[700px]:self-center max-[700px]:text-[7px] max-[700px]:tracking-[.12em]">
-            NUTRITION
-          </span>
+          <Image
+            src="/images/mes-proteines-logo.webp"
+            alt="Mes Protéines Nutrition"
+            width={958}
+            height={284}
+            priority
+            className="h-auto w-full"
+          />
         </a>
 
         <NavigationLinks />
