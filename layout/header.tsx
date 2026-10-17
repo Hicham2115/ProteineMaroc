@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   CreditCard,
   Heart,
@@ -10,12 +11,12 @@ import {
 import { MobileMenu } from "./mobile-menu";
 
 const navigation = [
-  { label: "Accueil", href: "#top", current: true },
-  { label: "Boutique", href: "#products" },
-  { label: "Prise de masse", href: "#goals" },
-  { label: "Perte de poids", href: "#goals" },
-  { label: "Vitamines & santé", href: "#categories" },
-  { label: "Qui sommes-nous ?", href: "#contact" },
+  { label: "Accueil", href: "/#top" },
+  { label: "Boutique", href: "/#products" },
+  { label: "Prise de masse", href: "/#goals" },
+  { label: "Perte de poids", href: "/#goals" },
+  { label: "Vitamines & santé", href: "/#categories" },
+  { label: "Qui sommes-nous ?", href: "/qui-sommes-nous/" },
 ];
 
 const services = [
@@ -32,14 +33,13 @@ function NavigationLinks() {
       aria-label="Navigation principale"
     >
       {navigation.map((item) => (
-        <a
+        <Link
           key={item.label}
           className="relative whitespace-nowrap py-3 text-[clamp(11px,.9vw,14px)] font-semibold text-charcoal transition-colors hover:text-brand-red-deep after:absolute after:inset-x-0 after:bottom-[3px] after:h-0.5 after:origin-left after:scale-x-0 after:bg-brand-red after:transition-transform hover:after:scale-x-100 aria-[current=page]:after:scale-x-100"
           href={item.href}
-          aria-current={item.current ? "page" : undefined}
         >
           {item.label}
-        </a>
+        </Link>
       ))}
     </nav>
   );
@@ -84,9 +84,9 @@ export function Header() {
       </div>
 
       <div className="grid min-h-[88px] grid-cols-[minmax(190px,1fr)_auto_minmax(100px,1fr)] items-center gap-[clamp(10px,1.4vw,22px)] border-b border-[#e9e6e0] px-[clamp(18px,3vw,52px)] max-[700px]:grid-cols-[1fr_auto] max-[700px]:gap-3 max-[700px]:px-[19px] max-[700px]:min-h-[72px]">
-        <a
+        <Link
           className="block w-[210px] max-[700px]:w-[184px]"
-          href="#top"
+          href="/"
           aria-label="Mes Proteines Nutrition, accueil"
         >
           <Image
@@ -97,7 +97,7 @@ export function Header() {
             priority
             className="h-auto w-full"
           />
-        </a>
+        </Link>
 
         <NavigationLinks />
 

@@ -1,27 +1,28 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { CurrentYear } from "@/components/current-year";
 
 const shopLinks = [
-  { label: "La boutique", href: "#products" },
+  { label: "La boutique", href: "/#products" },
   {
     label: "Prise de masse",
-    href: "#goals",
+    href: "/#goals",
   },
   {
     label: "Perte de poids",
-    href: "#goals",
+    href: "/#goals",
   },
-  { label: "Vitamines & santé", href: "#categories" },
+  { label: "Vitamines & santé", href: "/#categories" },
 ];
 
 const aboutLinks = [
-  { label: "Accueil", href: "#top" },
+  { label: "Accueil", href: "/#top" },
   {
     label: "Qui sommes-nous ?",
-    href: "#contact",
+    href: "/qui-sommes-nous/",
   },
-  { label: "Nos conseils", href: "#faq" },
+  { label: "Nos conseils", href: "/#faq" },
 ];
 
 export function SiteFooter() {
@@ -37,8 +38,8 @@ export function SiteFooter() {
       <div className="mx-auto max-w-[1440px]">
         <div className="grid gap-12 py-[clamp(56px,7vw,88px)] md:grid-cols-[1.25fr_.75fr_.85fr_1.15fr] md:gap-8 lg:gap-14">
           <div className="max-w-[340px]">
-            <a
-              href="#top"
+            <Link
+              href="/"
               aria-label="Mes Protéines Nutrition, accueil"
               className="inline-block w-[220px] max-w-full"
             >
@@ -49,7 +50,7 @@ export function SiteFooter() {
                 height={284}
                 className="h-auto w-full"
               />
-            </a>
+            </Link>
             <p className="mb-0 mt-5 max-w-[290px] text-[13px] leading-6 text-white/55">
               La performance à votre façon. Des conseils et des compléments pour
               accompagner chaque objectif.

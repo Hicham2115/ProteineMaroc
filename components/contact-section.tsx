@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useForm } from "@tanstack/react-form";
 import { z } from "zod";
 import { ArrowUpRight, Mail, MapPin, Phone, Send } from "lucide-react";
+import { StoreSelect } from "@/components/ui/store-select";
 
 const contactSchema = z.object({
   name: z.string().trim().min(2, "Indiquez votre nom (2 caractères minimum)."),
@@ -179,7 +180,29 @@ export function ContactSection() {
                 {(field) => (
                   <div>
                     <label htmlFor={field.name} className="text-[11px] font-semibold tracking-wide text-white/75">Sujet <span className="text-[#e46a61]">*</span></label>
-                    <input id={field.name} name={field.name} className={fieldClass} placeholder="Conseil produit, commande…" value={field.state.value} onBlur={field.handleBlur} onChange={(event) => { field.handleChange(event.target.value); clearError("subject"); }} aria-invalid={!!errors.subject} aria-describedby={errors.subject ? "contact-subject-error" : undefined} />
+                    <StoreSelect
+                      id={field.name}
+                      name={field.name}
+                      required
+                      value={field.state.value}
+                      onValueChange={(value) => {
+                        field.handleChange(value ?? "");
+                        clearError("subject");
+                      }}
+                      onBlur={field.handleBlur}
+                      placeholder="Choisissez un sujet"
+                      tone="dark"
+                      options={[
+                        { value: "conseil-produit", label: "Conseil produit" },
+                        { value: "commande", label: "Suivi de commande" },
+                        { value: "livraison", label: "Livraison" },
+                        { value: "produits-authentiques", label: "Authenticité d’un produit" },
+                        { value: "vente-en-gros", label: "Vente en gros" },
+                        { value: "autre", label: "Autre demande" },
+                      ]}
+                      aria-invalid={!!errors.subject}
+                      aria-describedby={errors.subject ? "contact-subject-error" : undefined}
+                    />
                     {errors.subject && <p id="contact-subject-error" className="mb-0 mt-1.5 text-xs text-[#ff8b83]">{errors.subject}</p>}
                   </div>
                 )}
