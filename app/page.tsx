@@ -6,6 +6,8 @@ import { CategoriesSection } from "@/components/categories-section";
 import { GoalsSection } from "@/components/goals-section";
 import { AudienceSection } from "@/components/audience-section";
 import { FaqSection } from "@/components/faq-section";
+import { TrustStrip } from "@/components/trust-strip";
+import { ReviewsSection } from "@/components/reviews-section";
 
 export default function Home() {
   return (
@@ -17,7 +19,10 @@ export default function Home() {
       <GoalsSection />
       <CategoriesSection />
       <FeaturedCarnibolic />
+      <ReviewsSection />
+
       <FaqSection />
+      <TrustStrip />
     </>
   );
 }
