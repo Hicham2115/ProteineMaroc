@@ -22,6 +22,7 @@ const aboutLinks = [
     label: "Qui sommes-nous ?",
     href: "/qui-sommes-nous/",
   },
+  { label: "Devenir partenaire", href: "/devenir-partenaire/" },
   { label: "Nos conseils", href: "/#faq" },
 ];
 
