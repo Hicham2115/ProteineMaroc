@@ -36,7 +36,7 @@ export function Hero() {
         <p className="hero-support mb-3 hidden text-[10px] font-bold uppercase tracking-[.2em] text-white/75 max-[700px]:block max-[600px]:text-[9px]">
           Nutrition · performance · bien-être
         </p>
-        <h1 className="hero-title-enter m-0 w-full max-w-none font-heading text-[clamp(44px,4.2vw,62px)] font-black uppercase leading-[.82] tracking-[-.035em] [text-wrap:balance] max-[700px]:max-w-[680px] max-[700px]:text-[clamp(40px,8vw,76px)] max-[600px]:max-w-full max-[600px]:font-serif max-[600px]:text-[clamp(30px,7.2vw,42px)] max-[600px]:font-bold max-[600px]:leading-[.98] max-[600px]:tracking-[-.055em]">
+        <h1 className="hero-title-enter hero-title-font m-0 w-full max-w-none font-heading text-[clamp(44px,4.2vw,62px)] font-normal uppercase leading-[1.08] tracking-[-.035em] [text-wrap:balance] max-[700px]:max-w-[680px] max-[700px]:text-[clamp(40px,8vw,76px)] max-[600px]:max-w-full max-[600px]:font-serif max-[600px]:text-[clamp(30px,7.2vw,42px)] max-[600px]:font-bold max-[600px]:leading-[1.08] max-[600px]:tracking-[-.055em]">
           La performance
           <br />
           se vit <em className="hero-title-emphasis font-normal">à votre</em>
